@@ -8,10 +8,10 @@ const openai = new OpenAI({
 
 export async function getCompletion(messages: string): Promise<ChatCompletion> {
   return await openai.chat.completions.create({
-    model: "phi3:latest",
+    model: "llama3.1:latest",
     messages: [
       {
-        role: "assistant",
+        role: "system",
         content:
           "You are an AI assistant helping a teacher interact with their student named Pegent. Keep responses friendly, concise, and appropriate for a student-teacher interaction. Also the course instructor of this course named First",
       },
